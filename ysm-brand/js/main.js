@@ -16,9 +16,13 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+    const normalizePage = (path) => {
+        const page = path.split("/").pop() || "index.html";
+        return page.replace(/\.html$/, "") || "index";
+    };
+    const currentPage = normalizePage(window.location.pathname);
     document.querySelectorAll(".nav-links a").forEach((link) => {
-        const href = link.getAttribute("href");
+        const href = normalizePage(link.getAttribute("href") || "");
         if (href === currentPage) {
             link.classList.add("active");
         }

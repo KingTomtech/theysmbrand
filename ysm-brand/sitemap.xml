@@ -1,43 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://kingtomtech.github.io/theysmbrand/</loc>
+        <loc>https://ysm.zingati.app/</loc>
         <lastmod>2026-05-21</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://kingtomtech.github.io/theysmbrand/shop.html</loc>
+        <loc>https://ysm.zingati.app/skincare.html</loc>
         <lastmod>2026-05-21</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://kingtomtech.github.io/theysmbrand/meal-prep.html</loc>
+        <loc>https://ysm.zingati.app/culinary.html</loc>
         <lastmod>2026-05-21</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://kingtomtech.github.io/theysmbrand/brunch.html</loc>
+        <loc>https://ysm.zingati.app/meal-prep.html</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://ysm.zingati.app/brunch.html</loc>
         <lastmod>2026-05-21</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://kingtomtech.github.io/theysmbrand/fitness.html</loc>
+        <loc>https://ysm.zingati.app/fitness.html</loc>
         <lastmod>2026-05-21</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://kingtomtech.github.io/theysmbrand/about.html</loc>
+        <loc>https://ysm.zingati.app/about.html</loc>
         <lastmod>2026-05-21</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://kingtomtech.github.io/theysmbrand/contact.html</loc>
+        <loc>https://ysm.zingati.app/contact.html</loc>
         <lastmod>2026-05-21</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>

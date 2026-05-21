@@ -1,0 +1,22 @@
+{
+    "name": "The YSM Brand",
+    "short_name": "YSM Brand",
+    "description": "Skincare, culinary experiences, meal prep, brunch, and fitness nutrition from Lusaka, Zambia.",
+    "start_url": "/theysmbrand/",
+    "scope": "/theysmbrand/",
+    "display": "standalone",
+    "background_color": "#fffaf3",
+    "theme_color": "#c7a253",
+    "icons": [
+        {
+            "src": "android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

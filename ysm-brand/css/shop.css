@@ -1,0 +1,146 @@
+/* Shop Page Styles */
+
+.page-header {
+    height: 50vh;
+    background: linear-gradient(135deg, var(--warm-brown), var(--deep-espresso));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    margin-top: 70px;
+}
+
+.page-header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(59, 31, 14, 0.6);
+}
+
+.page-header-content {
+    position: relative;
+    z-index: 2;
+    color: var(--white);
+    padding: 2rem;
+}
+
+.page-header-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.page-header-content p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.products-section {
+    padding: 5rem 0;
+}
+
+.culinary-section {
+    background: var(--white);
+}
+
+.fitness-meals-section {
+    background: var(--cream);
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--warm-brown);
+    margin-top: -2rem;
+    margin-bottom: 3rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+}
+
+.product-card {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.product-image {
+    height: 280px;
+    background-size: cover;
+    background-position: center;
+}
+
+.coffee-scrub-bg {
+    background: linear-gradient(135deg, #6F4E37, #8B5E3C);
+}
+
+.oat-scrub-bg {
+    background: linear-gradient(135deg, #D4C5B9, #C9A84C);
+}
+
+.skincare-combo-bg {
+    background: linear-gradient(135deg, #8B5E3C, #C9A84C);
+}
+
+.gourmet-spices-bg {
+    background: linear-gradient(135deg, #A0522D, #8B5E3C);
+}
+
+.artisan-honey-bg {
+    background: linear-gradient(135deg, #DAA520, #C9A84C);
+}
+
+.weekly-package-bg {
+    background: linear-gradient(135deg, #3B1F0E, #8B5E3C);
+}
+
+.protein-bowl-bg {
+    background: linear-gradient(135deg, #8B5E3C, #C9A84C);
+}
+
+.product-info {
+    padding: 2rem;
+    text-align: center;
+}
+
+.product-info h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: var(--deep-espresso);
+}
+
+.product-description {
+    color: var(--warm-brown);
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.product-price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--soft-gold);
+    margin-bottom: 1.5rem;
+    font-family: var(--font-heading);
+}
+
+@media (max-width: 768px) {
+    .page-header-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}

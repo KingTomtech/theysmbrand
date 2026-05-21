@@ -1,0 +1,203 @@
+/* About Page Styles */
+
+.about-header {
+    background: linear-gradient(135deg, var(--deep-espresso), var(--warm-brown));
+}
+
+.brand-story {
+    padding: 5rem 0;
+    background: var(--white);
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.story-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.story-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: var(--warm-brown);
+}
+
+.story-image {
+    height: 400px;
+    background: linear-gradient(135deg, var(--warm-brown), var(--deep-espresso));
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.mission-section {
+    padding: 5rem 0;
+    background: var(--cream);
+}
+
+.mission-statement {
+    text-align: center;
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: -2rem auto 4rem;
+    color: var(--deep-espresso);
+    line-height: 1.7;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.value-card {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.value-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.value-card h3 {
+    color: var(--deep-espresso);
+    margin-bottom: 1rem;
+}
+
+.value-card p {
+    color: var(--warm-brown);
+    line-height: 1.7;
+}
+
+.pillars-section {
+    padding: 5rem 0;
+    background: var(--white);
+}
+
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.pillar-card {
+    padding: 3rem 2.5rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.pillar-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+}
+
+.skincare-pillar {
+    background: var(--cream);
+}
+
+.skincare-pillar::before {
+    background: var(--warm-brown);
+}
+
+.culinary-pillar {
+    background: var(--cream);
+}
+
+.culinary-pillar::before {
+    background: var(--deep-espresso);
+}
+
+.fitness-pillar {
+    background: var(--cream);
+}
+
+.fitness-pillar::before {
+    background: var(--soft-gold);
+}
+
+.pillar-card:hover {
+    transform: translateY(-10px);
+}
+
+.pillar-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--deep-espresso);
+}
+
+.pillar-card p {
+    color: var(--warm-brown);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.founder-message {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--deep-espresso), var(--warm-brown));
+    color: var(--white);
+}
+
+.message-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.message-content blockquote {
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    font-family: var(--font-heading);
+}
+
+.message-content cite {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+@media (max-width: 992px) {
+    .story-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .story-image {
+        order: -1;
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .story-content h2 {
+        font-size: 2rem;
+    }
+    
+    .mission-statement {
+        font-size: 1.1rem;
+    }
+    
+    .message-content blockquote {
+        font-size: 1.2rem;
+    }
+}

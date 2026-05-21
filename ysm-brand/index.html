@@ -3,171 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The YSM Brand | Premium Zambian Wellness</title>
+    <meta name="description" content="The YSM Brand is a Lusaka wellness house for skincare, culinary experiences, meal prep, and fitness-focused nutrition.">
+    <meta property="og:title" content="The YSM Brand | Skincare, Culinary, Fitness">
+    <meta property="og:description" content="House of The YSM Brand in Lusaka, Zambia. Skincare. Culinary. Fitness.">
+    <meta property="og:image" content="images/ysm-logo.png">
+    <title>The YSM Brand | Lusaka Wellness House</title>
+    <link rel="icon" href="images/ysm-logo.png" type="image/png">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="container nav-container">
             <div class="logo">
-                <a href="index.html">
-                    <img src="images/ysm-logo.png" alt="The YSM Brand Logo" class="logo-img">
-                    <span class="logo-text">THE YSM BRAND</span>
-                </a>
+                <a href="index.html"><img src="images/ysm-logo.png" alt="The YSM Brand logo" class="logo-img"><span class="logo-text">The YSM Brand</span></a>
             </div>
-            <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
             <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="meal-prep.html">Meal Prep</a></li>
                 <li><a href="brunch.html">Brunch</a></li>
                 <li><a href="fitness.html">Fitness</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="nav-cta">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1 class="hero-title">Wellness Redefined</h1>
-            <p class="hero-subtitle">Proudly Zambian • Skincare • Culinary • Fitness</p>
-            <p class="hero-tagline">Experience luxury wellness from the heart of Lusaka</p>
-            <div class="hero-buttons">
-                <a href="shop.html" class="btn btn-primary">Shop Now</a>
-                <a href="meal-prep.html" class="btn btn-secondary">Order Meal Prep</a>
+    <main>
+        <section class="hero">
+            <div class="container hero-grid">
+                <div>
+                    <span class="eyebrow">Lusaka, Zambia</span>
+                    <h1>Skincare. Culinary. Fitness.</h1>
+                    <p class="hero-lede">House of The YSM Brand brings together natural self-care, thoughtful food, and goal-focused nutrition for a wellness lifestyle that feels local, polished, and personal.</p>
+                    <div class="hero-actions">
+                        <a href="https://wa.me/260975228899?text=Hi%20The%20YSM%20Brand,%20I%20would%20like%20to%20place%20an%20order" class="btn btn-primary" target="_blank" rel="noopener">Order on WhatsApp</a>
+                        <a href="shop.html" class="btn btn-secondary">Explore Products</a>
+                    </div>
+                </div>
+                <aside class="brand-card" aria-label="The YSM Brand highlights">
+                    <img src="images/ysm-logo.png" alt="The YSM Brand established 2020 mark">
+                    <dl>
+                        <div><dt>2020</dt><dd>Established</dd></div>
+                        <div><dt>6k+</dt><dd>Social community</dd></div>
+                        <div><dt>3</dt><dd>Wellness pillars</dd></div>
+                    </dl>
+                </aside>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Featured Sections -->
-    <section class="featured-sections">
-        <div class="container">
-            <div class="section-grid">
-                <div class="feature-card" data-aos="fade-up">
-                    <div class="feature-image skincare-bg"></div>
-                    <div class="feature-content">
+        <section>
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <span class="section-kicker">What we do</span>
+                        <h2 class="section-title">A complete wellness brand, built for real routines.</h2>
+                        <p class="section-lede">The public YSM profiles describe the brand simply and strongly: skincare, culinary, and fitness. The website now turns those pillars into clear paths for customers.</p>
+                    </div>
+                </div>
+                <div class="grid-3">
+                    <article class="card visual-card">
                         <h3>Skincare</h3>
-                        <p>Luxurious coffee & oat scrubs for radiant skin</p>
-                        <a href="shop.html#skincare" class="link-arrow">Explore →</a>
-                    </div>
-                </div>
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="feature-image culinary-bg"></div>
-                    <div class="feature-content">
+                        <p>Coffee and oat-inspired body care for smooth, refreshed skin.</p>
+                    </article>
+                    <article class="card visual-card">
                         <h3>Culinary</h3>
-                        <p>Gourmet meal prep & exclusive brunch experiences</p>
-                        <a href="meal-prep.html" class="link-arrow">Discover →</a>
-                    </div>
-                </div>
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="feature-image fitness-bg"></div>
-                    <div class="feature-content">
+                        <p>Meal prep, private brunches, and food experiences for Lusaka clients.</p>
+                    </article>
+                    <article class="card visual-card">
                         <h3>Fitness</h3>
-                        <p>Nourish your body with purpose-driven nutrition</p>
-                        <a href="fitness.html" class="link-arrow">Learn More →</a>
+                        <p>Nutrition plans that support training, recovery, and consistency.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="band">
+            <div class="container split">
+                <div>
+                    <span class="section-kicker">Why customers trust it</span>
+                    <h2 class="section-title">A social-first Zambian brand with a real audience.</h2>
+                    <p class="section-lede">The brand has active public profiles on Facebook and Instagram under the same handle, giving customers a familiar place to verify updates, see posts, and message directly.</p>
+                    <div class="social-strip" style="margin-top:24px">
+                        <a class="social-link" href="https://www.facebook.com/theysmbrand" target="_blank" rel="noopener">Facebook</a>
+                        <a class="social-link" href="https://www.instagram.com/theysmbrand/" target="_blank" rel="noopener">Instagram</a>
+                        <a class="social-link" href="https://wa.me/260975228899" target="_blank" rel="noopener">WhatsApp</a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Preview -->
-    <section class="about-preview">
-        <div class="container">
-            <div class="about-content">
-                <h2 class="section-title">Our Story</h2>
-                <p class="about-text">The YSM Brand is a proudly Zambian wellness brand based in Northmead, Lusaka. We believe in holistic wellness that nourishes your body, mind, and spirit through our three pillars: premium skincare, artisanal culinary creations, and fitness-focused nutrition.</p>
-                <a href="about.html" class="btn btn-outline">Read More</a>
-            </div>
-            <div class="about-image"></div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials">
-        <div class="container">
-            <h2 class="section-title">What Our Clients Say</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"The coffee scrub transformed my skin! Absolutely luxurious and the scent is divine."</p>
-                    <cite>— Chanda M.</cite>
-                </div>
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"Meal prep service is a game-changer. Delicious, healthy, and perfectly portioned."</p>
-                    <cite>— Mwansa K.</cite>
-                </div>
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"The brunch experience was unforgettable. Exclusive, elegant, and utterly delicious."</p>
-                    <cite>— Banda P.</cite>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <h2>Ready to Transform Your Wellness Journey?</h2>
-            <p>Connect with us on WhatsApp to place your order or book an experience</p>
-            <a href="https://wa.me/260975228899" class="btn btn-whatsapp" target="_blank">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                </svg>
-                Order on WhatsApp
-            </a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <img src="images/ysm-logo.png" alt="The YSM Brand Logo" class="footer-logo">
-                    <p>Premium wellness from the heart of Zambia</p>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/theysmbrand" target="_blank" aria-label="Facebook">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                        </a>
-                        <a href="#" aria-label="Instagram">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                        </a>
+                <div class="panel">
+                    <div class="stats-grid">
+                        <div class="stat"><strong>6.9k</strong><span>Facebook likes at review</span></div>
+                        <div class="stat"><strong>6.4k</strong><span>Instagram followers at review</span></div>
+                        <div class="stat"><strong>722</strong><span>Instagram posts at review</span></div>
                     </div>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="shop.html">Shop</a></li>
-                        <li><a href="meal-prep.html">Meal Prep</a></li>
-                        <li><a href="brunch.html">Brunch Bookings</a></li>
-                        <li><a href="fitness.html">Fitness</a></li>
+                    <ul class="check-list">
+                        <li>Clear WhatsApp ordering from every key page.</li>
+                        <li>Consistent social handles across Facebook and Instagram.</li>
+                        <li>Professional messaging around availability, bookings, and wellness goals.</li>
                     </ul>
                 </div>
-                <div class="footer-contact">
-                    <h4>Contact Us</h4>
-                    <p>📍 Northmead, Lusaka, Zambia</p>
-                    <p>📱 <a href="https://wa.me/260975228899">0975 228 899</a></p>
-                    <p>✉️ hello@theysmbrand.com</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <span class="section-kicker">Start here</span>
+                <h2 class="section-title">Choose the path that fits today.</h2>
+                <div class="grid-4">
+                    <a class="card" href="shop.html"><h3>Shop skincare</h3><p>Browse body scrubs and care bundles.</p></a>
+                    <a class="card" href="meal-prep.html"><h3>Book meal prep</h3><p>Send your meal plan request in minutes.</p></a>
+                    <a class="card" href="brunch.html"><h3>Plan brunch</h3><p>Ask about intimate culinary experiences.</p></a>
+                    <a class="card" href="fitness.html"><h3>Fuel training</h3><p>Match meals to your fitness goals.</p></a>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 The YSM Brand. All rights reserved. Proudly Zambian 🇿🇲</p>
+        </section>
+
+        <section class="dark-band">
+            <div class="container section-head">
+                <div>
+                    <span class="section-kicker">Fast response</span>
+                    <h2 class="section-title">Ready to order, book, or ask a question?</h2>
+                    <p class="section-lede">Message The YSM Brand directly on WhatsApp for current availability, delivery, custom meals, or event bookings.</p>
+                </div>
+                <a href="https://wa.me/260975228899" class="btn btn-whatsapp" target="_blank" rel="noopener">Chat on WhatsApp</a>
             </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div><img src="images/ysm-logo.png" alt="The YSM Brand logo" class="footer-logo"><p>House of The YSM Brand. Skincare, culinary, and fitness from Lusaka, Zambia.</p></div>
+            <div><h4>Explore</h4><ul><li><a href="shop.html">Shop</a></li><li><a href="meal-prep.html">Meal Prep</a></li><li><a href="brunch.html">Brunch</a></li><li><a href="fitness.html">Fitness</a></li></ul></div>
+            <div><h4>Contact</h4><p>Northmead, Lusaka, Zambia</p><p><a href="https://wa.me/260975228899">0975 228 899</a></p><p><a href="https://www.instagram.com/theysmbrand/">@theysmbrand</a></p></div>
         </div>
+        <div class="container footer-bottom">Â&copy; 2026 The YSM Brand. Proudly Zambian.</div>
     </footer>
 
     <script src="js/main.js"></script>

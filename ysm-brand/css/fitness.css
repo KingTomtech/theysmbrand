@@ -1,0 +1,192 @@
+/* Fitness Page Styles */
+
+.fitness-header {
+    background: linear-gradient(135deg, var(--deep-espresso), var(--warm-brown));
+}
+
+.philosophy-section {
+    padding: 5rem 0;
+    background: var(--white);
+}
+
+.philosophy-content {
+    max-width: 800px;
+}
+
+.philosophy-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.philosophy-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--warm-brown);
+    margin-bottom: 1.5rem;
+}
+
+.meal-plans-section {
+    padding: 5rem 0;
+    background: var(--cream);
+}
+
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.plan-card {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.plan-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.featured-plan {
+    background: linear-gradient(135deg, var(--warm-brown), var(--deep-espresso));
+    color: var(--white);
+}
+
+.featured-plan h3,
+.featured-plan .plan-desc,
+.featured-plan ul li,
+.featured-plan .plan-price {
+    color: var(--white);
+}
+
+.popular-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--soft-gold);
+    color: var(--deep-espresso);
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.plan-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: var(--deep-espresso);
+}
+
+.plan-desc {
+    color: var(--warm-brown);
+    margin-bottom: 1.5rem;
+}
+
+.plan-card ul {
+    list-style: none;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.plan-card ul li {
+    padding: 0.7rem 0;
+    color: var(--deep-espresso);
+    border-bottom: 1px solid var(--cream);
+}
+
+.plan-card ul li:last-child {
+    border-bottom: none;
+}
+
+.plan-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--soft-gold);
+    margin-bottom: 1.5rem;
+    font-family: var(--font-heading);
+}
+
+.tips-section {
+    padding: 5rem 0;
+    background: var(--white);
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.tip-card {
+    text-align: center;
+    padding: 2rem;
+    background: var(--cream);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.tip-card:hover {
+    transform: translateY(-5px);
+}
+
+.tip-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.tip-card h3 {
+    color: var(--deep-espresso);
+    margin-bottom: 1rem;
+}
+
+.tip-card p {
+    color: var(--warm-brown);
+    line-height: 1.7;
+}
+
+.success-section {
+    padding: 5rem 0;
+    background: var(--cream);
+}
+
+.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.story-card {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--soft-gold);
+}
+
+.story-card p {
+    font-style: italic;
+    color: var(--deep-espresso);
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.story-card cite {
+    color: var(--warm-brown);
+    font-weight: 600;
+    font-style: normal;
+}
+
+@media (max-width: 768px) {
+    .plans-grid,
+    .tips-grid,
+    .stories-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .featured-plan {
+        order: -1;
+    }
+}

@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Feedback — The YSM Brand</title>
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@400;700;900&display=swap" rel="stylesheet" />
+    <style>
+        /* ===== YSM BRAND DESIGN SYSTEM ===== */
+        :root {
+            --ink: #241713;
+            --espresso: #3c211b;
+            --cocoa: #6f3f35;
+            --clay: #9d6a58;
+            --gold: #c7a253;
+            --gold-light: rgba(199,162,83,0.15);
+            --leaf: #3f6f5f;
+            --cream: #f7f0e6;
+            --linen: #fffaf3;
+            --white: #ffffff;
+            --muted: #75645d;
+            --line: rgba(60,33,27,0.12);
+            --shadow-sm: 0 4px 16px rgba(60,33,27,0.08);
+            --shadow: 0 12px 40px rgba(60,33,27,0.12);
+            --radius-sm: 6px;
+            --radius: 12px;
+            --radius-lg: 20px;
+            --font-heading: "Playfair Display", Georgia, serif;
+            --font-body: "Lato", Arial, sans-serif;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--ink);
+            background: var(--linen);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        img { max-width: 100%; display: block; }
+        a { color: inherit; text-decoration: none; }
+        h1, h2, h3, h4 {
+            font-family: var(--font-heading);
+            line-height: 1.15;
+            color: var(--espresso);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 820px;
+            margin: 0 auto;
+        }
+
+        /* ===== BANNER ===== */
+        .temp-banner {
+            background: var(--gold);
+            color: var(--espresso);
+            text-align: center;
+            padding: 14px 20px;
+            border-radius: var(--radius);
+            font-weight: 700;
+            font-size: 0.9rem;
+            width: 100%;
+            max-width: 820px;
+            margin-bottom: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .temp-banner span { font-size: 1.2rem; }
+
+        /* ===== HERO ===== */
+        .hero {
+            text-align: center;
+            padding: 40px 20px 20px;
+        }
+        .hero-logo {
+            width: 100px;
+            height: auto;
+            margin: 0 auto 18px;
+        }
+        .hero h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            color: var(--muted);
+            font-size: 1.05rem;
+            max-width: 580px;
+            margin: 0 auto;
+        }
+        .hero .developer-note {
+            margin-top: 16px;
+            padding: 14px 20px;
+            background: var(--cream);
+            border-left: 4px solid var(--gold);
+            border-radius: var(--radius-sm);
+            font-size: 0.92rem;
+            color: var(--cocoa);
+            text-align: left;
+        }
+        .hero .developer-note strong {
+            color: var(--espresso);
+        }
+
+        /* ===== FORM ===== */
+        .feedback-form {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+            padding: 36px 32px;
+            margin-top: 10px;
+        }
+
+        .form-section {
+            margin-bottom: 28px;
+        }
+        .form-section:last-of-type {
+            margin-bottom: 20px;
+        }
+
+        .form-section h2 {
+            font-size: 1.2rem;
+            margin-bottom: 4px;
+        }
+        .form-section .section-desc {
+            font-size: 0.88rem;
+            color: var(--muted);
+            margin-bottom: 16px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        .form-row .full-width {
+            grid-column: 1 / -1;
+        }
+
+        label {
+            display: block;
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin-bottom: 4px;
+            color: var(--espresso);
+        }
+        label .optional {
+            font-weight: 400;
+            color: var(--muted);
+            font-size: 0.8rem;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px 14px;
+            border: 1.5px solid var(--line);
+            border-radius: var(--radius-sm);
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            color: var(--ink);
+            background: var(--white);
+            transition: border-color 0.2s;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px var(--gold-light);
+        }
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .field-wrap {
+            margin-bottom: 14px;
+        }
+
+        /* ===== RATING ===== */
+        .star-rating {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+            gap: 4px;
+        }
+        .star-rating input {
+            display: none;
+        }
+        .star-rating label {
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--line);
+            transition: color 0.15s;
+            font-family: Arial, sans-serif;
+            line-height: 1;
+        }
+        .star-rating label:hover,
+        .star-rating label:hover ~ label,
+        .star-rating input:checked ~ label {
+            color: var(--gold);
+        }
+
+        /* ===== CHECKBOX GRID ===== */
+        .checkbox-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+        .checkbox-grid label {
+            font-weight: 400;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            padding: 6px 0;
+        }
+        .checkbox-grid input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--gold);
+            flex-shrink: 0;
+        }
+
+        /* ===== PRIVACY NOTE ===== */
+        .privacy-note {
+            background: var(--cream);
+            border-radius: var(--radius);
+            padding: 18px 20px;
+            margin: 20px 0 22px;
+            font-size: 0.88rem;
+            color: var(--cocoa);
+            border: 1px solid var(--line);
+        }
+        .privacy-note strong {
+            color: var(--espresso);
+        }
+
+        /* ===== SUBMIT ===== */
+        .btn-submit {
+            display: block;
+            width: 100%;
+            padding: 14px 28px;
+            background: var(--gold);
+            color: var(--espresso);
+            font-family: var(--font-heading);
+            font-size: 1.15rem;
+            font-weight: 700;
+            border: none;
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+        }
+        .btn-submit:hover {
+            background: #b8923f;
+        }
+        .btn-submit:active {
+            transform: scale(0.98);
+        }
+
+        /* ===== STATUS ===== */
+        .status-msg {
+            display: none;
+            padding: 14px 18px;
+            border-radius: var(--radius);
+            margin-top: 16px;
+            font-weight: 700;
+            text-align: center;
+        }
+        .status-msg.success {
+            display: block;
+            background: #e6f4e6;
+            color: #1e6b1e;
+            border: 1px solid #b8d8b8;
+        }
+        .status-msg.error {
+            display: block;
+            background: #fde8e8;
+            color: #a52323;
+            border: 1px solid #f5c6c6;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer-note {
+            text-align: center;
+            margin-top: 28px;
+            padding: 20px 0 10px;
+            color: var(--muted);
+            font-size: 0.82rem;
+            border-top: 1px solid var(--line);
+        }
+        .footer-note a {
+            color: var(--cocoa);
+            text-decoration: underline;
+        }
+        .footer-note a:hover {
+            color: var(--gold);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 640px) {
+            body { padding: 12px; }
+            .feedback-form { padding: 24px 18px; }
+            .form-row { grid-template-columns: 1fr; }
+            .checkbox-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 1.5rem; }
+            .hero-logo { width: 80px; }
+            .temp-banner { font-size: 0.8rem; padding: 10px 14px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TEMPORARY BANNER -->
+    <div class="temp-banner">
+        <span>&#128679;</span> Temporary Page &mdash; For Website Design Review Only
+        <span>&#128679;</span>
+    </div>
+
+    <div class="container">
+
+        <!-- HERO -->
+        <div class="hero">
+            <img class="hero-logo" src="images/ysm-logo.png" alt="The YSM Brand logo" />
+            <h1>Help Us Shape the YSM Website</h1>
+            <p>
+                We&rsquo;re building a better online home for The YSM Brand.
+                Your feedback on this temporary page helps us improve the design
+                and make sure everything feels right before launch.
+            </p>
+            <div class="developer-note">
+                <strong>&#128100; To:</strong> Thomas Chansa (Developer / System Admin)<br />
+                <strong>&#128279; Purpose:</strong> This page is temporary &mdash; it exists only to
+                improve the design process and ensure a smooth website build. All information you
+                provide here will be sent directly to the development team.<br />
+                <strong>&#128274; Private information</strong> (pricing, business registration,
+                financial details, etc.) should be communicated directly rather than through this form.
+            </div>
+        </div>
+
+        <!-- FORM -->
+        <form class="feedback-form" id="feedbackForm">
+
+            <!-- SECTION 1: About You -->
+            <div class="form-section">
+                <h2>&#128100; About You</h2>
+                <p class="section-desc">So we know whose feedback this is.</p>
+                <div class="form-row">
+                    <div class="field-wrap">
+                        <label for="name">Full Name <span class="optional">(optional)</span></label>
+                        <input type="text" id="name" name="name" placeholder="Your name" />
+                    </div>
+                    <div class="field-wrap">
+                        <label for="contact">Phone / Email <span class="optional">(optional)</span></label>
+                        <input type="text" id="contact" name="contact" placeholder="097X XXX XXX or email" />
+                    </div>
+                </div>
+                <div class="field-wrap">
+                    <label for="relation">Your relationship to YSM</label>
+                    <select id="relation" name="relation" required>
+                        <option value="">Select one...</option>
+                        <option value="Customer">Customer / Client</option>
+                        <option value="Potential Customer">Potential Customer</option>
+                        <option value="Brand Partner">Brand Partner / Collaborator</option>
+                        <option value="Team Member">YSM Team Member</option>
+                        <option value="Designer / Developer">Designer / Developer</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- SECTION 2: First Impressions -->
+            <div class="form-section">
+                <h2>&#128064; First Impressions</h2>
+                <p class="section-desc">What stood out when you landed on the site?</p>
+                <div class="field-wrap">
+                    <label for="first-thought">What was your first thought visiting ysm.zingati.app?</label>
+                    <textarea id="first-thought" name="first-thought" rows="2" placeholder="e.g. Clean design, felt warm, easy to navigate..."></textarea>
+                </div>
+                <div class="field-wrap">
+                    <label for="brand-vibe">Does the site feel like "The YSM Brand"? <span class="optional">(1 = not at all, 5 = perfectly)</span></label>
+                    <div class="star-rating" id="brandVibeRating">
+                        <input type="radio" name="vibe-rating" id="vibe5" value="5" /><label for="vibe5" title="5 - Perfectly">&#9733;</label>
+                        <input type="radio" name="vibe-rating" id="vibe4" value="4" /><label for="vibe4" title="4">&#9733;</label>
+                        <input type="radio" name="vibe-rating" id="vibe3" value="3" /><label for="vibe3" title="3">&#9733;</label>
+                        <input type="radio" name="vibe-rating" id="vibe2" value="2" /><label for="vibe2" title="2">&#9733;</label>
+                        <input type="radio" name="vibe-rating" id="vibe1" value="1" /><label for="vibe1" title="1 - Not at all">&#9733;</label>
+                    </div>
+                </div>
+                <div class="field-wrap">
+                    <label for="missing-content">Is there anything you expected to see but couldn&rsquo;t find?</label>
+                    <textarea id="missing-content" name="missing-content" rows="3" placeholder="e.g. Pricing, menu list, delivery areas, about the founder..."></textarea>
+                </div>
+            </div>
+
+            <!-- SECTION 3: Design & Usability -->
+            <div class="form-section">
+                <h2>&#127912; Design &amp; Usability</h2>
+                <p class="section-desc">What works and what doesn&rsquo;t?</p>
+                <div class="field-wrap">
+                    <label>Which pages did you visit? <span class="optional">(tick all that apply)</span></label>
+                    <div class="checkbox-grid">
+                        <label><input type="checkbox" name="pages-visited" value="Home" /> Home</label>
+                        <label><input type="checkbox" name="pages-visited" value="Culinary" /> Culinary</label>
+                        <label><input type="checkbox" name="pages-visited" value="Meal Prep" /> Meal Prep</label>
+                        <label><input type="checkbox" name="pages-visited" value="Brunch" /> Brunch</label>
+                        <label><input type="checkbox" name="pages-visited" value="Fitness" /> Fitness</label>
+                        <label><input type="checkbox" name="pages-visited" value="Family Club" /> Family Club</label>
+                        <label><input type="checkbox" name="pages-visited" value="About" /> About</label>
+                        <label><input type="checkbox" name="pages-visited" value="Contact" /> Contact</label>
+                    </div>
+                </div>
+                <div class="field-wrap">
+                    <label for="design-thoughts">What do you think about the colours, fonts, and overall look?</label>
+                    <textarea id="design-thoughts" name="design-thoughts" rows="2" placeholder="e.g. Warm tones are nice, maybe more contrast on buttons..."></textarea>
+                </div>
+                <div class="field-wrap">
+                    <label for="mobile-experience">How does it feel on your phone?</label>
+                    <select id="mobile-experience" name="mobile-experience">
+                        <option value="">Select one...</option>
+                        <option value="Great">Great &mdash; smooth and easy</option>
+                        <option value="Okay">Okay &mdash; some small issues</option>
+                        <option value="Needs Work">Needs work &mdash; hard to navigate</option>
+                        <option value="Didn't check on phone">Didn&rsquo;t check on phone</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- SECTION 4: Content & Info Gaps -->
+            <div class="form-section">
+                <h2>&#128221; Content &amp; Information</h2>
+                <p class="section-desc">What info is missing or unclear?</p>
+                <div class="field-wrap">
+                    <label for="info-gaps">What information would you want to see before placing an order?</label>
+                    <textarea id="info-gaps" name="info-gaps" rows="3" placeholder="e.g. Menu with prices, delivery fees, weekly schedule..."></textarea>
+                </div>
+                <div class="field-wrap">
+                    <label for="confusion">Was anything confusing or hard to understand?</label>
+                    <textarea id="confusion" name="confusion" rows="2" placeholder="e.g. What does YSM stand for? How do I actually order?"></textarea>
+                </div>
+            </div>
+
+            <!-- SECTION 5: Overall Rating -->
+            <div class="form-section">
+                <h2>&#11088; Overall</h2>
+                <p class="section-desc">Give the current site a rating.</p>
+                <div class="field-wrap">
+                    <label>Overall experience <span class="optional">(1 = poor, 5 = excellent)</span></label>
+                    <div class="star-rating" id="overallRating">
+                        <input type="radio" name="overall-rating" id="overall5" value="5" /><label for="overall5" title="5 - Excellent">&#9733;</label>
+                        <input type="radio" name="overall-rating" id="overall4" value="4" /><label for="overall4" title="4">&#9733;</label>
+                        <input type="radio" name="overall-rating" id="overall3" value="3" /><label for="overall3" title="3">&#9733;</label>
+                        <input type="radio" name="overall-rating" id="overall2" value="2" /><label for="overall2" title="2">&#9733;</label>
+                        <input type="radio" name="overall-rating" id="overall1" value="1" /><label for="overall1" title="1 - Poor">&#9733;</label>
+                    </div>
+                </div>
+                <div class="field-wrap">
+                    <label for="improvement">If you could change one thing, what would it be?</label>
+                    <textarea id="improvement" name="improvement" rows="2" placeholder="One thing that would make this site better..."></textarea>
+                </div>
+                <div class="field-wrap">
+                    <label for="extra-comments">Any other comments, suggestions, or ideas?</label>
+                    <textarea id="extra-comments" name="extra-comments" rows="3" placeholder="Open floor — tell us anything else..."></textarea>
+                </div>
+            </div>
+
+            <!-- PRIVACY NOTE -->
+            <div class="privacy-note">
+                <strong>&#128274; Your privacy matters.</strong><br />
+                All information submitted here goes directly to
+                <strong>Thomas Chansa</strong> (Developer &amp; System Administrator)
+                via WhatsApp for the sole purpose of improving the YSM Brand website design.
+                If you need to share sensitive business information (pricing, registration
+                numbers, financial data, etc.), please communicate that directly rather
+                than through this form.
+            </div>
+
+            <!-- SUBMIT -->
+            <button class="btn-submit" type="submit">&#128172; Send Feedback via WhatsApp</button>
+            <div class="status-msg" id="statusMsg"></div>
+        </form>
+
+        <!-- FOOTER -->
+        <div class="footer-note">
+            &copy; 2026 The YSM Brand. Proudly Zambian.<br />
+            <span style="font-size:0.78rem;">
+                Temporary feedback page &mdash; not the live site.
+                <a href="index.html">&#8592; Back to main site</a>
+            </span>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("feedbackForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const statusMsg = document.getElementById("statusMsg");
+            statusMsg.className = "status-msg";
+
+            // Collect name
+            const name = document.getElementById("name").value.trim() || "Anonymous";
+
+            // Collect contact
+            const contact = document.getElementById("contact").value.trim() || "Not provided";
+
+            // Collect relation
+            const relation = document.getElementById("relation").value;
+            const relationLabel = relation
+                ? document.querySelector("#relation option[value='" + relation + "']").textContent
+                : "Not specified";
+
+            // Collect first thought
+            const firstThought = document.getElementById("first-thought").value.trim() || "Not provided";
+
+            // Collect vibe rating
+            const vibeRating = document.querySelector('input[name="vibe-rating"]:checked');
+            const vibeVal = vibeRating ? vibeRating.value + " / 5" : "Not rated";
+
+            // Collect missing content
+            const missingContent = document.getElementById("missing-content").value.trim() || "Not provided";
+
+            // Collect pages visited
+            const pagesChecked = document.querySelectorAll('input[name="pages-visited"]:checked');
+            const pagesList = pagesChecked.length
+                ? Array.from(pagesChecked).map(cb => cb.value).join(", ")
+                : "None selected";
+
+            // Collect design thoughts
+            const designThoughts = document.getElementById("design-thoughts").value.trim() || "Not provided";
+
+            // Collect mobile experience
+            const mobileExp = document.getElementById("mobile-experience").value;
+            const mobileLabel = mobileExp
+                ? document.querySelector("#mobile-experience option[value='" + mobileExp + "']").textContent
+                : "Not specified";
+
+            // Collect info gaps
+            const infoGaps = document.getElementById("info-gaps").value.trim() || "Not provided";
+
+            // Collect confusion
+            const confusion = document.getElementById("confusion").value.trim() || "Not provided";
+
+            // Collect overall rating
+            const overallRating = document.querySelector('input[name="overall-rating"]:checked');
+            const overallVal = overallRating ? overallRating.value + " / 5" : "Not rated";
+
+            // Collect improvement
+            const improvement = document.getElementById("improvement").value.trim() || "Not provided";
+
+            // Collect extra comments
+            const extraComments = document.getElementById("extra-comments").value.trim() || "Not provided";
+
+            // Build WhatsApp message
+            const message = [
+                "\u2709\ufe0f *YSM Website Feedback*",
+                "",
+                "\u2014\u2014\u2014 \ud83d\udc64 About You \u2014\u2014\u2014",
+                "Name: " + name,
+                "Contact: " + contact,
+                "Role: " + relationLabel,
+                "",
+                "\u2014\u2014\u2014 \ud83d\udc40 First Impressions \u2014\u2014\u2014",
+                "First thought: " + firstThought,
+                "Brand vibe match: " + vibeVal,
+                "Missing content: " + missingContent,
+                "",
+                "\u2014\u2014\u2014 \ud83c\udfd0 Design & Usability \u2014\u2014\u2014",
+                "Pages visited: " + pagesList,
+                "Design thoughts: " + designThoughts,
+                "Mobile experience: " + mobileLabel,
+                "",
+                "\u2014\u2014\u2014 \ud83d\udce2 Content & Info \u2014\u2014\u2014",
+                "Info gaps: " + infoGaps,
+                "Confusion: " + confusion,
+                "",
+                "\u2014\u2014\u2014 \u2b50 Overall \u2014\u2014\u2014",
+                "Overall rating: " + overallVal,
+                "One change: " + improvement,
+                "Extra comments: " + extraComments,
+                "",
+                "\u2014\u2014\u2014 \u2014\u2014\u2014",
+                "Sent from the temporary YSM website feedback page."
+            ].join("\n");
+
+            const whatsappUrl = "https://wa.me/260776885851?text=" + encodeURIComponent(message);
+
+            // Show success
+            statusMsg.textContent = "\u2705 Opening WhatsApp to send your feedback. Thank you!";
+            statusMsg.className = "status-msg success";
+
+            // Open WhatsApp
+            window.open(whatsappUrl, "_blank", "noopener");
+
+            // Reset after a short delay
+            setTimeout(() => {
+                this.reset();
+                // Reset star ratings visually
+                document.querySelectorAll('.star-rating input').forEach(el => el.checked = false);
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

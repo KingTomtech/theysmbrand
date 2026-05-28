@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Store | The YSM Brand</title>
+    <meta name="description" content="Shop YSM Fitness — meal plans, training gear, and wellness essentials for your fitness journey in Lusaka.">
+    <meta name="theme-color" content="#c7a253">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/fitness-store.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo"><a href="index.html"><img src="images/ysm-logo.png" alt="The YSM Brand logo" class="logo-img"><span class="logo-text">The YSM Brand</span></a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li><li><a href="culinary.html">Culinary</a></li><li><a href="meal-prep.html">Meal Prep</a></li><li><a href="brunch.html">Brunch</a></li><li><a href="family-experience.html" class="nav-family">Family Club</a></li><li><a href="fitness.html">Fitness</a></li><li><a href="about.html">About</a></li><li><a href="contact.html" class="nav-cta">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="menuToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+    <nav class="mobile-nav-drawer" id="mobileNav">
+        <a href="index.html">Home</a><a href="culinary.html">Culinary</a><a href="meal-prep.html">Meal Prep</a><a href="brunch.html">Brunch</a><a href="family-experience.html" class="nav-family">✦ Family Club</a><a href="fitness.html">Fitness</a><a href="about.html">About</a><a href="contact.html" class="nav-cta">Contact</a>
+    </nav>
+
+    <!-- STORE HEADER -->
+    <div class="store-header">
+        <div class="container">
+            <div>
+                <a href="fitness.html" class="back-link" style="color:rgba(255,255,255,0.6)">&larr; Back to Fitness</a>
+                <h2>YSM <span>Fitness</span> Store</h2>
+            </div>
+            <button class="cart-trigger" id="cartTrigger" aria-label="Open cart">
+                <span class="cart-icon">&#128722;</span>
+                Cart
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- CART OVERLAY + DRAWER -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h3>Your <span>Cart</span></h3>
+            <button class="cart-close" id="cartClose" aria-label="Close cart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="cart-empty" id="cartEmpty">
+                <span>&#128722;</span>
+                <p>Your cart is empty.<br>Add some fitness gear or meal plans!</p>
+            </div>
+            <div id="cartList"></div>
+        </div>
+        <div class="cart-footer" id="cartFooter" style="display:none">
+            <div class="cart-subtotal">
+                <span>Subtotal</span>
+                <strong id="cartSubtotal">K0</strong>
+            </div>
+            <div class="cart-total" style="display:none">
+                <span>Delivery</span>
+                <strong>Calculated at checkout</strong>
+            </div>
+            <button class="btn-checkout" id="checkoutBtn">
+                Checkout via WhatsApp &#128172;
+            </button>
+        </div>
+    </div>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="page-hero" style="padding-bottom:0">
+            <div class="container page-hero-inner" style="padding-bottom:32px">
+                <div class="page-hero-text">
+                    <span class="eyebrow">Fitness store</span>
+                    <h1>Train hard. Look the part.</h1>
+                    <p class="page-lede">Premium gym apparel, gloves, ropes, and accessories — everything you need to show up ready in Lusaka.</p>
+                </div>
+                <img class="page-hero-image" src="images/ysm-fitness-gym.jpg" alt="YSM fitness training session" loading="eager" style="aspect-ratio:4/3">
+            </div>
+        </section>
+
+        <!-- CATEGORY TABS + PRODUCTS -->
+        <section class="store-section" id="products">
+            <div class="container">
+                <div class="store-section-header">
+                    <span class="section-kicker">Shop by category</span>
+                    <h2 class="section-title">Everything for your fitness routine</h2>
+                </div>
+
+                <div class="category-tabs" id="categoryTabs">
+                    <button class="category-tab active" data-category="all">All</button>
+                    <button class="category-tab" data-category="apparel">Apparel</button>
+                    <button class="category-tab" data-category="accessories">Gym Accessories</button>
+                </div>
+
+                <div class="store-grid" id="productGrid">
+                    <!-- Products rendered by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY SHOP WITH YSM -->
+        <section class="warm-band">
+            <div class="container">
+                <div class="social-proof-grid">
+                    <article class="voice-card">
+                        <div>
+                            <span class="section-kicker" style="margin-bottom:12px;display:block">Why shop YSM Fitness</span>
+                            <blockquote>"Your body keeps score. Feed it right."</blockquote>
+                        </div>
+                        <cite>— YSM fitness philosophy</cite>
+                    </article>
+                    <div class="menu-board">
+                        <article class="menu-card">
+                            <div class="menu-date">&#99896;</div>
+                            <div>
+                                <h3>Premium quality, YSM designed</h3>
+                                <p>Every piece of apparel and accessory is built to perform. From heavyweight hoodies to gym gloves that last.</p>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <div class="menu-date">&#128666;</div>
+                            <div>
+                                <h3>Free delivery in Lusaka</h3>
+                                <p>On orders over K500. We bring your fitness essentials right to your door.</p>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <div class="menu-date">&#128172;</div>
+                            <div>
+                                <h3>Personalised support</h3>
+                                <p>WhatsApp us to check sizing, availability, or get recommendations for your training setup.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="dark-band">
+            <div class="container" style="text-align:center;max-width:580px">
+                <span class="section-kicker" style="color:rgba(199,162,83,0.8)">Need help?</span>
+                <h2 class="section-title" style="margin-top:10px">Not sure what you need?</h2>
+                <p class="section-lede" style="margin:0 0 28px">Message us on WhatsApp and we'll help you build the perfect fitness stack for your routine.</p>
+                <a class="btn btn-whatsapp" target="_blank" rel="noopener" href="https://wa.me/260975228899?text=Hi%20The%20YSM%20Brand,%20I%20need%20help%20choosing%20fitness%20store%20products">Chat on WhatsApp</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast"></div>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div><img src="images/ysm-logo.png" alt="The YSM Brand logo" class="footer-logo"><p>House of The YSM Brand. Culinary, meal prep, and fitness from Lusaka, Zambia.</p></div>
+            <div><h4>Explore</h4><ul><li><a href="culinary.html">Culinary</a></li><li><a href="meal-prep.html">Meal Prep</a></li><li><a href="brunch.html">Brunch</a></li><li><a href="family-experience.html">Family Club</a></li><li><a href="fitness.html">Fitness</a></li><li><a href="about.html">About</a></li></ul></div>
+            <div><h4>Contact</h4><p>Lusaka, Zambia</p><p style="margin-top:8px"><a href="https://wa.me/260975228899">0975 228 899</a></p><p style="margin-top:6px"><a href="https://www.instagram.com/theysmbrand/">@theysmbrand</a></p></div>
+        </div>
+        <div class="container footer-bottom">&copy; 2026 The YSM Brand. Proudly Zambian.</div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // ---- Mobile Nav Toggle ----
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.getElementById('mobileNav').classList.toggle('active');
+        });
+    </script>
+    <script src="js/fitness-store.js"></script>
+</body>
+</html>

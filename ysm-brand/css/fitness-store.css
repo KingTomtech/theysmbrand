@@ -586,6 +586,8 @@
 
 /* Mobile: 2-column grid */
 @media (max-width: 639px) {
+    .cart-fab { bottom: 84px; }
+    .toast { bottom: 100px; }
     .store-header { top: 0; position: relative; }
     .store-grid {
         grid-template-columns: repeat(2, 1fr);

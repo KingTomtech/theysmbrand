@@ -32,17 +32,16 @@
     <!-- STORE HEADER -->
     <div class="store-header">
         <div class="container">
-            <div>
-                <a href="fitness.html" class="back-link" style="color:rgba(255,255,255,0.6)">&larr; Back to Fitness</a>
-                <h2>YSM <span>Fitness</span> Store</h2>
-            </div>
-            <button class="cart-trigger" id="cartTrigger" aria-label="Open cart">
-                <span class="cart-icon">&#128722;</span>
-                Cart
-                <span class="cart-count" id="cartCount">0</span>
-            </button>
+            <a href="fitness.html" class="back-link" style="color:rgba(255,255,255,0.6)">&larr; Back to Fitness</a>
+            <h2>YSM <span>Fitness</span> Store</h2>
         </div>
     </div>
+
+    <!-- FLOATING CART BUTTON -->
+    <button class="cart-fab" id="cartTrigger" aria-label="Open cart">
+        <span class="cart-fab-icon">&#128722;</span>
+        <span class="cart-count" id="cartCount">0</span>
+    </button>
 
     <!-- CART OVERLAY + DRAWER -->
     <div class="cart-overlay" id="cartOverlay"></div>
@@ -87,6 +86,28 @@
             </div>
         </section>
 
+        <!-- COLLECTION LOOKBOOK -->
+        <section class="catalog-band">
+            <div class="container">
+                <div class="catalog-inner">
+                    <div class="catalog-text">
+                        <span class="section-kicker">The YSM Apparel Collection</span>
+                        <h2 class="section-title">Your mindset<br>shapes your reality.</h2>
+                        <p class="section-lede">Hoodies, crewnecks, tees and joggers — built for those who show up, stay consistent, and keep becoming. Available in Black, Brown, Olive, and Grey.</p>
+                        <div class="catalog-icons">
+                            <span>&#9678; Bullseye</span>
+                            <span>&#128196; Plan</span>
+                            <span>&#127939; Runner</span>
+                            <span>&#128081; Crown</span>
+                            <span>&#9968; Mountain</span>
+                        </div>
+                        <p class="catalog-tagline"><em>discipline today. freedom tomorrow.</em></p>
+                    </div>
+                    <img src="images/ysm-apparel-catalog.png" alt="YSM Brand full apparel collection — hoodies, crewnecks, tees and joggers in black, brown, olive and grey" class="catalog-img">
+                </div>
+            </div>
+        </section>
+
         <!-- CATEGORY TABS + PRODUCTS -->
         <section class="store-section" id="products">
             <div class="container">
@@ -97,8 +118,11 @@
 
                 <div class="category-tabs" id="categoryTabs">
                     <button class="category-tab active" data-category="all">All</button>
-                    <button class="category-tab" data-category="apparel">Apparel</button>
-                    <button class="category-tab" data-category="accessories">Gym Accessories</button>
+                    <button class="category-tab" data-category="hoodies">Hoodies</button>
+                    <button class="category-tab" data-category="crewnecks">Crewnecks</button>
+                    <button class="category-tab" data-category="tees">Tees</button>
+                    <button class="category-tab" data-category="joggers">Joggers</button>
+                    <button class="category-tab" data-category="accessories">Accessories</button>
                 </div>
 
                 <div class="store-grid" id="productGrid">

@@ -852,6 +852,124 @@ textarea { resize: vertical; min-height: 100px; }
 }
 
 /* ============================================================
+   GOLD ACCENT VALUE CARDS
+   ============================================================ */
+.card--gold-accent {
+    border-top: 3px solid var(--gold);
+    position: relative;
+}
+.card-gold-num {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--gold);
+    opacity: 0.35;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+.card--gold-accent h3 { margin-top: 4px; }
+
+/* ============================================================
+   WEEKLY SCHEDULE STRIP
+   ============================================================ */
+.weekly-schedule {
+    padding: 64px 0;
+    background: var(--espresso);
+}
+.weekly-schedule .section-kicker { color: rgba(199,162,83,0.75); }
+.weekly-schedule .section-title { color: var(--white); margin-bottom: 40px; }
+.week-strip {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+}
+.week-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(199,162,83,0.25);
+    border-radius: var(--radius);
+    padding: 24px 18px;
+    text-align: center;
+    transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+.week-card:hover {
+    background: rgba(199,162,83,0.12);
+    border-color: rgba(199,162,83,0.6);
+    transform: translateY(-4px);
+}
+.week-day {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+.week-theme {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    color: var(--white);
+    line-height: 1.2;
+}
+.week-emoji {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    display: block;
+}
+@media (max-width: 800px) {
+    .week-strip { grid-template-columns: repeat(3, 1fr); }
+    .week-strip .week-card:last-child { grid-column: span 3; max-width: 220px; margin: 0 auto; width: 100%; }
+}
+@media (max-width: 480px) {
+    .week-strip { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .week-strip .week-card:last-child { grid-column: span 2; max-width: 200px; }
+}
+
+/* ============================================================
+   YSM FAMILY BRAND SECTION
+   ============================================================ */
+.ysm-family-section {
+    padding: 72px 0;
+    background: var(--cream);
+}
+.ysm-family-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: center;
+}
+.ysm-family-image {
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    width: 100%;
+    max-width: 420px;
+    justify-self: center;
+}
+.ysm-family-text .section-kicker { margin-bottom: 12px; display: block; }
+.ysm-family-text h2 { margin-bottom: 18px; }
+.ysm-family-text p { color: var(--muted); line-height: 1.75; margin-bottom: 14px; }
+.ysm-family-pillars {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+}
+.ysm-family-pillar {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--cocoa);
+    border: 1.5px solid var(--gold);
+    border-radius: 100px;
+    padding: 6px 16px;
+}
+@media (max-width: 760px) {
+    .ysm-family-inner { grid-template-columns: 1fr; gap: 32px; }
+    .ysm-family-image { max-width: 320px; }
+}
+
+/* ============================================================
    MOBILE — fixed bottom bar
    ============================================================ */
 @media (max-width: 639px) {
